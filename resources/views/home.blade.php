@@ -27,7 +27,13 @@
                 <tr>
                     <td>{{$book->title}}</td>
                     <td>{{$book->author}}</td>
-                    <td>del</td>
+                    <td>
+                        <form method="post" action="{{ route('books.destroy', $book->id) }}">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="btn btn-danger">Del</button>
+                        </form>
+                    </td>
                 </tr>
             @endforeach
         </table>
