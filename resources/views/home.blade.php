@@ -1,5 +1,6 @@
-<html>
-    <body>
-        <h1>Hello World</h1>
-    </body>
-</html>
+
+@extends('layouts.app')
+
+@section('content')
+    <h1>Hello World</h1>
+@endsection
