@@ -86,7 +86,15 @@ class BooksController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request, [
+            'title' => 'required',
+            'author' => 'required'
+        ]);
+        $book = Book::find($id);
+        $book->author =  $request->input('author');
+        $book->save();
+        
+        return redirect('/');
     }
 
     /**

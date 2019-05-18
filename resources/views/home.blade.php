@@ -3,18 +3,7 @@
 
 @section('content')
     <div class="row mb-5">
-        <form method="post" action="{{ route('books.store') }}">
-            @csrf
-            <div class="form-group">
-                <label>Title</label>
-                <input class="form-control" v-on:keyup="updateButton" name="title" v-model="bookFormTitle">
-            </div>
-            <div class="form-group">
-                <label>Author</label>
-                <input class="form-control" name="author">
-            </div>
-            <button type="submit" id="submit-book" :class="submitClass">@{{submitText}}</button>
-        </form>
+        <book-form>@crsf</book-form>
     </div>
     <div class="row">
         <table class="table table-bordered">
