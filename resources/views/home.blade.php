@@ -7,13 +7,13 @@
             @csrf
             <div class="form-group">
                 <label>Title</label>
-                <input class="form-control" name="title">
+                <input class="form-control" v-on:keyup="updateButton" name="title" v-model="bookFormTitle">
             </div>
             <div class="form-group">
                 <label>Author</label>
                 <input class="form-control" name="author">
             </div>
-            <button type="submit" class="btn btn-primary">Add</button>
+            <button type="submit" id="submit-book" :class="submitClass">@{{submitText}}</button>
         </form>
     </div>
     <div class="row">

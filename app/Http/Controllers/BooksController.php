@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Book;
+use Illuminate\Http\Response;
 
 class BooksController extends Controller
 {
@@ -15,6 +16,12 @@ class BooksController extends Controller
     public function index()
     {
         //
+    }
+
+    public function getBooks()
+    {   
+        $books = Book::all();
+        return $books;
     }
 
     /**

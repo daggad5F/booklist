@@ -12,5 +12,5 @@
 */
 
 Route::get('/', 'PagesController@home');
-
+Route::get('/books/getBooks', 'BooksController@getBooks');
 Route::resource('books', 'BooksController');
